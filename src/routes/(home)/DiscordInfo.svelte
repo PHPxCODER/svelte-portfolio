@@ -77,6 +77,7 @@
 							 fetchAsset.name === "PyCharm Community" ||
 							 fetchAsset.name === "Android Studio" ||
 							 fetchAsset.name === "VEGAS Pro" ||
+							 fetchAsset.name === "BlueStacks 5" ||
 							 fetchAsset.name === "League of Legends" ) ?
 							`https://cdn.discordapp.com/app-assets/${fetchAsset.application_id}/${fetchAsset.assets.large_image}.png`
 
