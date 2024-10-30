@@ -24,8 +24,7 @@
 	<div class="relative w-20 h-20 shrink-0 rounded-full">
 		{#if $lanyard}
 			<object
-				data="https://cdn.discordapp.com/avatars/{discordId}/{$lanyard
-					.discord_user.avatar}"
+				data="https://cdn.discordapp.com/avatars/{discordId}/{$lanyard.discord_user.avatar}"
 				type="image/png"
 				class="w-20 h-20 rounded-full bg-gray-800 text-gray-400 grid place-items-center"
 				aria-label="Discord Avatar"
@@ -63,8 +62,7 @@
 			<p class="flex items-center text-sm">
 				{#if fetchAsset}
 					<img src={
-							(fetchAsset.name === "Visual Studio Code" || 
-							 fetchAsset.name === "Visual Studio" ||
+							(fetchAsset.name === "Visual Studio" || 
 							 fetchAsset.name === "Zed" ||
 							 fetchAsset.name === "PhpStorm" ||
 							 fetchAsset.name === "WebStorm" ||
@@ -80,6 +78,9 @@
 							 fetchAsset.name === "BlueStacks 5" ||
 							 fetchAsset.name === "League of Legends" ) ?
 							`https://cdn.discordapp.com/app-assets/${fetchAsset.application_id}/${fetchAsset.assets.large_image}.png`
+
+							: fetchAsset.name === "Visual Studio Code" || fetchAsset.name === "Code" ?
+							(fetchAsset.assets.small_image ? `https://${fetchAsset.assets.small_image.split('https/')[1]}` : "")
 
 							: fetchAsset.name === "Prime Video" ?
 							`https://cdn.discordapp.com/app-assets/705139844883677224/705140011946737806.webp`
@@ -111,8 +112,9 @@
 							: fetchAsset.name === "Call of Duty®: WWII" ?
 							`https://cdn.discordapp.com/app-assets/${fetchAsset.application_id}/${fetchAsset.assets.large_image}.png`
 
-							// Premid
-							: `https://${fetchAsset.assets.large_image.split('https/')[1]}`
+							: fetchAsset.assets.large_image ? 
+							`https://${fetchAsset.assets.large_image.split('https/')[1]}` 
+							: ""
 							}
 						alt=""
 						class="w-8 h-8 mr-1"
