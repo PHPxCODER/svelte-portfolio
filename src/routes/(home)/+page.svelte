@@ -37,7 +37,7 @@
 			<GitHub />
 		</SocialLink>
 
-		<SocialLink href="https://www.linkedin.com/in/phpxcoder/" name="LinkedIn">
+		<SocialLink href="https://linkedin.com/in/phpxcoder/" name="LinkedIn">
 			<Linkedin />
 		</SocialLink>
 
