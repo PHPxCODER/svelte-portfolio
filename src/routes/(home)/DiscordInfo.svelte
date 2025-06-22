@@ -59,7 +59,7 @@
 		</p>
 
 		{#if fetchAsset}
-			<p class="flex items-center text-sm">
+			<p class="flex items-center text-sm pt-1">
 				{#if fetchAsset}
 					<img src={
 							(fetchAsset.name === "Visual Studio" || 
@@ -80,7 +80,7 @@
 							`https://cdn.discordapp.com/app-assets/${fetchAsset.application_id}/${fetchAsset.assets.large_image}.png`
 
 							: fetchAsset.name === "Visual Studio Code" || fetchAsset.name === "Code" ?
-							(fetchAsset.assets.small_image ? `https://${fetchAsset.assets.small_image.split('https/')[1]}` : "")
+							"/Insiders.svg"
 
 							: fetchAsset.name === "Prime Video" ?
 							`https://cdn.discordapp.com/app-assets/705139844883677224/705140011946737806.webp`
@@ -117,7 +117,7 @@
 							: ""
 							}
 						alt=""
-						class="w-8 h-8 mr-1"
+						class="{fetchAsset.name === 'Visual Studio Code' || fetchAsset.name === 'Code' ? 'w-5 h-5 mr-2' : 'w-8 h-8 mr-1'}"
 					/>
 				{/if}
 
