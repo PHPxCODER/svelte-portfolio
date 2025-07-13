@@ -23,6 +23,7 @@
 <nav class="wrapper mt-20 md:mt-32 text-gray-400">
 	<ul class="flex flex-wrap gap-x-12 gap-y-2">
 		<NavLink href="/">Home</NavLink>
+		<NavLink href="/experience">Experience</NavLink>
 		<NavLink href="/projects">Projects</NavLink>
 		<NavLink href="/music">Music</NavLink>
 	</ul>

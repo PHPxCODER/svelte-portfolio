@@ -20,7 +20,7 @@
 	});
 
 	function isDayTime(date: Date): boolean {
-		const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: '2-digit' };
+		const options = { timeZone: 'Asia/Kolkata', hour12: false, hour: "2-digit" as const };
 		const kolkataTimeString = date.toLocaleTimeString('en-US', options);
 		const kolkataHour = parseInt(kolkataTimeString.split(':')[0], 10);
 		return kolkataHour >= 6 && kolkataHour < 18;
