@@ -15,7 +15,7 @@
 	import Spotify from '$lib/components/icons/Spotify.svelte';
 	import Meta from '$lib/components/Meta.svelte';
 
-	const birthday = new Date('2004-07-21T10:06:00.000Z');
+	const birthday = new Date(Date.UTC(2004, 6, 20, 18, 30)); // July 21, 2004 at 00:00 IST(+5:30 UTC)
 
 	$: age = differenceInYears($now, birthday);
 </script>
@@ -27,7 +27,7 @@
 
 	<p class="mt-4 text-gray-400">
 		Hey! I'm <b>Subhadeep</b>,
-		{age === 18 ? 'an' : 'a'}
+		{age === 20 ? 'an' : 'a'}
 		{age}-year-old developer from
 		<b>India</b>.
 	</p>
