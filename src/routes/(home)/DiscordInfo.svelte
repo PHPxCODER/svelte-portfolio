@@ -63,6 +63,7 @@
 				{#if fetchAsset}
 					<img src={
 							(fetchAsset.name === "Visual Studio" || 
+							 fetchAsset.name === "Illustrator" ||
 							 fetchAsset.name === "Zed" ||
 							 fetchAsset.name === "PhpStorm" ||
 							 fetchAsset.name === "WebStorm" ||
